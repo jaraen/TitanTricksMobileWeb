@@ -5,7 +5,7 @@ var Tools = require(Mods.TOOLS);
 
 var sep = Ti.Filesystem.separator;
 var resPath = Ti.Filesystem.resourcesDirectory;
-var imgsPath =  sep + 'imgs' + sep;
+var imgsPath =   'imgs' + sep;
 	
 module.exports = {
 	
