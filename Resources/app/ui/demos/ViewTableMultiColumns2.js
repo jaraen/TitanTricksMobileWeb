@@ -14,7 +14,7 @@ var demoInfo = {
 	header: 		'UI',
 	ios:			true,
 	android:		true,
-	mobileweb:		false
+	mobileweb:		true
 }
 
 var	LABEL_CELL = {

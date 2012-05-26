@@ -7,12 +7,13 @@ var DemoTemplateView = require(Mods.TEMPLATEDEMO),
 
 var demoInfo = {
 	title:			'Collapsible View',
-	description: 	'A collapsible container with a clickable header to expand/collapse',
+	description: 	'A collapsible container with a clickable header to expand/collapse. Works partially in mobileweb (requires redraw window)',
 	instructions: 	'Click on the title of each container',
 	component: 		'CollapsibleView',
 	header: 		'UI',
 	ios:			true,
-	android:		true
+	android:		true,
+	mobileweb:		true,
 }
 
 demoInfo.createView = function(){

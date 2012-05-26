@@ -59,9 +59,8 @@ module.exports = function(args){
 		});
 
 		if(comp){
-			//Ti.API.info(typeof comp + ' = ' + comp.toString());
 			if(typeof comp === 'string' || typeof comp === 'number'){
-				v.add(Ti.UI.createLabel(Tools.combine(row.cellStyle, {text:comp})));
+				v.add(Ti.UI.createLabel(Tools.combine(row.cellStyle, {text:comp.toString()})));
 			}else{
 				v.add(comp);
 			}
@@ -80,3 +79,5 @@ module.exports = function(args){
 	
 	return row;
 };
+
+

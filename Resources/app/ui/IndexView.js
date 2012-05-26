@@ -51,13 +51,35 @@ module.exports = function() {
 	tableView.addEventListener('click', function(e){
 		var row = e.row;
 		var title = e.row.demo.component;
+		
+		// var actInd = Ti.UI.createActivityIndicator({
+			// width:50, height:50
+		// });
+		
+		// row.add(actInd);
+		
+		row.backgroundColor = '#ddd';
+		
+		// actInd.show();
+		
+		//do this to refresh correctly the row before open the window 
+		//so the backgroundColor changes and the activityIndicator is shown
+		setTimeout(function(){
+			var w = new DemoWin({
+				title: title,
+				demo: row.demo
+			});
+	
+			w.open({modal:true});
+			
+			w.addEventListener('close', function(){
+				row.backgroundColor = '#fff';
+				// actInd.hide();
+				// row.remove(actInd);	
+			});
 
-		var w = new DemoWin({
-			title: title,
-			demo: row.demo
-		});
-
-		w.open({modal:true});
+		},10);
+		
 	});
 	
 	view.add(tableView);
