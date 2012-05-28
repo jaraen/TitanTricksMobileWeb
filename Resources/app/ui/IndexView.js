@@ -70,13 +70,14 @@ module.exports = function() {
 				demo: row.demo
 			});
 	
-			w.open({modal:true});
-			
-			w.addEventListener('close', function(){
+			w.addEventListener('open', function(){
 				row.backgroundColor = '#fff';
 				// actInd.hide();
 				// row.remove(actInd);	
 			});
+			
+			w.open({modal:true});
+			
 
 		},10);
 		
